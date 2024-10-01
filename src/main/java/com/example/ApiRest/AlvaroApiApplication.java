@@ -10,6 +10,4 @@ public class AlvaroApiApplication {
 		SpringApplication.run(AlvaroApiApplication.class, args);
 	}
 
-
-
 }

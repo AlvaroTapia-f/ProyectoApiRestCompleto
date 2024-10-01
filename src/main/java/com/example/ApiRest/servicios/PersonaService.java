@@ -1,12 +1,15 @@
 package com.example.ApiRest.servicios;
 
 import com.example.ApiRest.entidades.Persona;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
 public interface PersonaService extends BaseService<Persona, Long>  {
 
     List<Persona> search(String filtro) throws Exception;
+    Page<Persona> search(String filtro, Pageable pageable) throws Exception;
 
 
 
