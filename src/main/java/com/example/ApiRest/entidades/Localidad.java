@@ -12,7 +12,7 @@ import org.hibernate.envers.Audited;
 @Audited
 public class Localidad extends Base {
 
-    @Column(name = "denominación")
+    @Column(name = "denominacion")
     private String denominacion;
 
 

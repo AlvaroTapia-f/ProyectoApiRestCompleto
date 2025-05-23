@@ -43,4 +43,16 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implement
             throw new Exception(e.getMessage());
         }
     }
+
+    @Override
+    public List<Persona> searchByDni(int dni) throws Exception {
+        try{
+            List<Persona> personas = personaRepository.findByDni(dni);
+            return personas;
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
 }

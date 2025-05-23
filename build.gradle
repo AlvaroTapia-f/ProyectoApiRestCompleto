@@ -35,6 +35,9 @@ dependencies {
 	// H2
 	runtimeOnly 'com.h2database:h2'
 
+	// https://mvnrepository.com/artifact/org.springframework/spring-core
+	implementation group: 'org.springframework', name: 'spring-core', version: '6.2.3'
+
 	// Openapi swagger
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.1.0'
 	// Envers
@@ -45,7 +48,7 @@ dependencies {
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 	annotationProcessor "org.projectlombok:lombok-mapstruct-binding:0.2.0"// json
-	implementation 'org.json:json:20210307'
+	implementation 'org.json:json:20231013'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'

@@ -35,6 +35,9 @@ public interface PersonaRepository extends BaseRepository<Persona, Long> {
             nativeQuery = true)
     Page<Persona> searchNativo(@Param("filtro") String filtro, Pageable pageable);
 
+    //Metodo buscar por dni
+    List<Persona> findByDni(int dni);
+
 
 
 

@@ -31,4 +31,14 @@ public class PersonaController extends BaseControllerImpl<Persona, PersonaServic
         }
     }
 
+    @GetMapping("/SearchByDni")
+    public ResponseEntity<?> searchByDni(@RequestParam int dni){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchByDni(dni));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\": \"" + e.getMessage() + "\"}");
+        }
+    }
+
+
 }
