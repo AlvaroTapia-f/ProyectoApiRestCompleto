@@ -27,7 +27,7 @@ public class Persona extends Base {
     @JoinColumn(name = "fk_domicilio")
     private Domicilio domicilio;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany()
     @JoinTable(name = "persona_libro", joinColumns = @JoinColumn(name = "persona_id"), inverseJoinColumns = @JoinColumn(name = "libro_id"))
     @NonNull
     private List<Libro> libros = new ArrayList<Libro>();
